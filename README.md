@@ -17,7 +17,7 @@ npm install
 # modify informations in _data/metadata.json
 npx eleventy
 npx eleventy --serve
-# http://10.188.166.176:8080/
+# localhost:8080/
 
 # or build auto when template changes
 npx eleventy --watch
