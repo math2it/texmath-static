@@ -18,11 +18,16 @@ Don't design, testing to create components first! Directly test or reference to 
 - [ ] Pagination.
 - [ ] Multi-users/authors.
 - [ ] SEO friendly?
+- [ ] Keep links from Wordpress.
 - [ ] Popular posts? Related posts?
 - [ ] Search.
 - [ ] Series of posts.
 - [ ] Commen system.
 - [ ] Upvote button.
+- [ ] Tags & categories.
+- [ ] Custom urls (with/without `/posts/` or with/without days)
+- [ ] Previous / Next post
+- [ ] Table of contents.
 
 ## Tools
 
@@ -47,4 +52,21 @@ npx eleventy --watch
 
 # or in debug mode
 DEBUG=* npx eleventy
+```
+
+## References
+
+- [Official docs](https://www.11ty.dev/docs/).
+
+## Cheat sheet
+
+Next / Previous posts
+
+``` html
+<ul>
+  {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+  {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+</ul>
 ```
