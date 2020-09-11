@@ -1,4 +1,4 @@
-# texmath-static
+# texmath-static [![Netlify Status](https://api.netlify.com/api/v1/badges/c187bcca-9464-4b2d-98d3-06982d8c1fe4/deploy-status)](https://app.netlify.com/sites/eloquent-goldstine-e9aa03/deploys)
 
 *A static version for texmath.* -- __11ty version__.
 
@@ -12,7 +12,7 @@ Don't design, testing to create components first! Directly test or reference to 
 - [ ] Create a custom block shortcode (for example, hide/show box)
 - [ ] Insert custom javascript blocks (for example, reference-mode button)
 - [ ] Insert math equations (katex)
-- [ ] Insert syntax highlight for inline/block codes.
+- [ ] Insert syntax highlight for inline/block codes. => using [highlight.js](https://highlightjs.org/) ([like StackOverflow](https://meta.stackexchange.com/questions/353983/goodbye-prettify-hello-highlight-js-swapping-out-our-syntax-highlighter))
 - [ ] Custom markdown parser (for example, use `===text===` for rendering to `<mark>text</mark>`).
 - [ ] Migrate from wordpress (less modification as possible)
 - [ ] Pagination.
