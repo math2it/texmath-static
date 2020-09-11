@@ -1,5 +1,28 @@
 # texmath-static
+
 *A static version for texmath.* -- __11ty version__.
+
+## TODO
+
+Don't design, testing to create components first! Directly test or reference to a source.
+
+- [ ] All basic fotmat in markdown (heading, blockquote, list, bold, italic,...)
+- [ ] Insert images (lazy load, different position, directly or from markdown post files,...)
+- [ ] Create a custom inline shortcode (for example, for highlight text, keyboard,...)
+- [ ] Create a custom block shortcode (for example, hide/show box)
+- [ ] Insert custom javascript blocks (for example, reference-mode button)
+- [ ] Insert math equations (katex)
+- [ ] Insert syntax highlight for inline/block codes.
+- [ ] Custom markdown parser (for example, use `===text===` for rendering to `<mark>text</mark>`).
+- [ ] Migrate from wordpress (less modification as possible)
+- [ ] Pagination.
+- [ ] Multi-users/authors.
+- [ ] SEO friendly?
+- [ ] Popular posts? Related posts?
+- [ ] Search.
+- [ ] Series of posts.
+- [ ] Commen system.
+- [ ] Upvote button.
 
 ## Tools
 
