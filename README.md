@@ -63,9 +63,7 @@ DEBUG=* npx eleventy
 
 ## Cheat sheet
 
-### Frontmatter
-
-Basics
+Frontmatter
 
 ``` yaml
 ---
@@ -88,11 +86,7 @@ tags: [tag 1, tag 2]
 ---
 ```
 
-### Code
-
 Need [this plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/). List of suppo[rted languages](https://prismjs.com/#languages-list).
-
-Highlight lines
 
 ~~~ js
 ``` text/1-2,4
@@ -104,8 +98,6 @@ function myCommand() {
 ```
 ~~~
 
-### Navigation
-
 Next / Previous posts
 
 ``` html
@@ -116,5 +108,3 @@ Next / Previous posts
   {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 </ul>
 ```
-
-### Others
