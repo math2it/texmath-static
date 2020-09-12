@@ -6,16 +6,17 @@
 
 Don't design, testing to create components first! Directly test or reference to a source.
 
-- [ ] All basic fotmat in markdown (heading, blockquote, list, bold, italic,...)
+- [x] All basic fotmat in markdown (heading, blockquote, list, bold, italic,...)
 - [ ] Insert images (lazy load, different position, directly or from markdown post files,...)
 - [ ] Create a custom inline shortcode (for example, for highlight text, keyboard,...)
 - [ ] Create a custom block shortcode (for example, hide/show box)
 - [ ] Insert custom javascript blocks (for example, reference-mode button)
 - [ ] Insert math equations (katex)
-- [ ] Insert syntax highlight for inline/block codes. => using [highlight.js](https://highlightjs.org/) ([like StackOverflow](https://meta.stackexchange.com/questions/353983/goodbye-prettify-hello-highlight-js-swapping-out-our-syntax-highlighter))
+- [x] Insert syntax highlight for inline/block codes.
 - [ ] Custom markdown parser (for example, use `===text===` for rendering to `<mark>text</mark>`).
 - [ ] Migrate from wordpress (less modification as possible)
 - [ ] Pagination.
+- [ ] Navigation.
 - [ ] Multi-users/authors.
 - [ ] SEO friendly?
 - [ ] Keep links from Wordpress.
@@ -24,10 +25,12 @@ Don't design, testing to create components first! Directly test or reference to 
 - [ ] Series of posts.
 - [ ] Commen system.
 - [ ] Upvote button.
-- [ ] Tags & categories.
+- [x] Tags
+- [ ] Categories
 - [ ] Custom urls (with/without `/posts/` or with/without days)
 - [x] Previous / Next post
 - [ ] Table of contents.
+- [x] 404 page.
 
 ## Tools
 
@@ -87,7 +90,7 @@ tags: [tag 1, tag 2]
 
 ### Code
 
-Need [this plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/).
+Need [this plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/). List of suppo[rted languages](https://prismjs.com/#languages-list).
 
 Highlight lines
 
