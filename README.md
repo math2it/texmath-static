@@ -26,7 +26,7 @@ Don't design, testing to create components first! Directly test or reference to 
 - [ ] Upvote button.
 - [ ] Tags & categories.
 - [ ] Custom urls (with/without `/posts/` or with/without days)
-- [ ] Previous / Next post
+- [x] Previous / Next post
 - [ ] Table of contents.
 
 ## Tools
@@ -60,6 +60,49 @@ DEBUG=* npx eleventy
 
 ## Cheat sheet
 
+### Frontmatter
+
+Basics
+
+``` yaml
+---
+title: Title of the post
+description: description of the post
+date: 2020-09-11
+layout: layouts/post.njk
+---
+```
+
+Tags
+
+``` yaml
+---
+tags:
+  - default
+
+# or
+tags: [tag 1, tag 2]
+---
+```
+
+### Code
+
+Need [this plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/).
+
+Highlight lines
+
+~~~ js
+``` text/1-2,4
+// this is a command
+function myCommand() {
+	let counter = 0;
+	counter++;
+}
+```
+~~~
+
+### Navigation
+
 Next / Previous posts
 
 ``` html
@@ -70,3 +113,5 @@ Next / Previous posts
   {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 </ul>
 ```
+
+### Others
