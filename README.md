@@ -63,48 +63,4 @@ DEBUG=* npx eleventy
 
 ## Cheat sheet
 
-Frontmatter
-
-``` yaml
----
-title: Title of the post
-description: description of the post
-date: 2020-09-11
-layout: layouts/post.njk
----
-```
-
-Tags
-
-``` yaml
----
-tags:
-  - default
-
-# or
-tags: [tag 1, tag 2]
----
-```
-
-Need [this plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/). List of suppo[rted languages](https://prismjs.com/#languages-list).
-
-~~~ js
-``` text/1-2,4
-// this is a command
-function myCommand() {
-	let counter = 0;
-	counter++;
-}
-```
-~~~
-
-Next / Previous posts
-
-``` html
-<ul>
-  {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-  {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-</ul>
-```
+Read [this note](https://dinhanhthi.com/11ty-nunjucks).
