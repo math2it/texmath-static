@@ -31,6 +31,8 @@ Don't design, testing to create components first! Directly test or reference to 
 - [x] Previous / Next post
 - [ ] Table of contents.
 - [x] 404 page.
+- [x] Bootstrap
+  - [ ] Separatedly components.
 
 ## Tools
 
@@ -46,15 +48,8 @@ Don't design, testing to create components first! Directly test or reference to 
 ``` bash
 npm install
 # modify informations in _data/metadata.json
-npx eleventy
-npx eleventy --serve
+npm start
 # localhost:8080/
-
-# or build auto when template changes
-npx eleventy --watch
-
-# or in debug mode
-DEBUG=* npx eleventy
 ```
 
 ## References

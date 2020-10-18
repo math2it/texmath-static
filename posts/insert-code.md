@@ -23,6 +23,18 @@ function myCommand() {
 console.log('Test');
 ```
 
+``` js/2/4
+// this is a command
+function myCommand() {
+	let counter = 0;
+
+	counter++;
+}
+
+// Test with a line break above this line.
+console.log('Test');
+```
+
 ## Different languages
 
 [List](https://prismjs.com/#languages-list) of supported languages.
