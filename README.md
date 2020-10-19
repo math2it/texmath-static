@@ -11,7 +11,11 @@ Don't design, testing to create components first! Directly test or reference to 
 - [ ] Create a custom inline shortcode (for example, for highlight text, keyboard,...)
 - [ ] Create a custom block shortcode (for example, hide/show box)
 - [ ] Insert custom javascript blocks (for example, reference-mode button)
-- [ ] Insert math equations (katex)
+- [x] Insert math equations (katex)
+  - [x] [markdown-it-katex](https://github.com/waylonflinn/markdown-it-katex)
+    - [x] Using updated version (12), currently 0.5.1. -> use [this](https://github.com/iktakahiro/markdown-it-katex/) instead!
+    - [ ] **Or?** using katex directly in `<head>`
+  - [ ] **later** -- [markdown-it-mathjax](https://github.com/classeur/markdown-it-mathjax)
 - [x] Insert syntax highlight for inline/block codes.
 - [ ] Custom markdown parser (for example, use `===text===` for rendering to `<mark>text</mark>`).
 - [ ] Migrate from wordpress (less modification as possible)
@@ -23,7 +27,7 @@ Don't design, testing to create components first! Directly test or reference to 
 - [ ] Popular posts? Related posts?
 - [ ] Search.
 - [ ] Series of posts.
-- [ ] Commen system.
+- [ ] Comment system.
 - [ ] Upvote button.
 - [x] Tags
 - [ ] Categories
@@ -31,8 +35,13 @@ Don't design, testing to create components first! Directly test or reference to 
 - [x] Previous / Next post
 - [ ] Table of contents.
 - [x] 404 page.
-- [x] Bootstrap
-  - [ ] Separatedly components.
+- [x] Bootstrap -> **don't use in texmath / dinhanhthi.com!**
+  - [x] If wanna use, read [this note](https://dinhanhthi.com/11ty-nunjucks#bootstrap--11ty).
+  - [ ] **optional** -- Separatedly components.
+  - [ ] **optional** -- Using [Bootstrap native](https://thednp.github.io/bootstrap.native/).
+  - [ ] Remove bootstrap from test!
+- [ ] Without bootstrap
+  - [ ] Collapse with native JS -> [ref](https://medium.com/dailyjs/mimicking-bootstraps-collapse-with-vanilla-javascript-b3bb389040e7)
 
 ## Tools
 

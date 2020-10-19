@@ -1,9 +1,8 @@
 ---
-title: Bootstrap component testing
-description: It's used for testing components in boostrap
+title: Bootstrap-like components
+description: Create some useful bootstrap components without using bootstrap
 date: 2018-07-04
-tags:
-  - number-2
+tags: [theme]
 layout: layouts/post.njk
 ---
 
@@ -27,12 +26,3 @@ Leverage agile frameworks to provide a robust synopsis for high level overviews.
 
 <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 
-
-## Section Header
-
-<a href="{{ '/posts/firstpost/' | url }}">First post</a>
-<a href="{{ '/posts/thirdpost/' | url }}">Third post</a>
-
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
-
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
