@@ -2,6 +2,8 @@
 
 *A static version for texmath.* -- __11ty version__.
 
+__Demo__: https://eloquent-goldstine-e9aa03.netlify.app
+
 ## TODO
 
 Don't design, testing to create components first! Directly test or reference to a source.
@@ -14,8 +16,8 @@ Don't design, testing to create components first! Directly test or reference to 
 - [x] Insert math equations (katex)
   - [x] [markdown-it-katex](https://github.com/waylonflinn/markdown-it-katex)
     - [x] Using updated version (12), currently 0.5.1. -> use [this](https://github.com/iktakahiro/markdown-it-katex/) instead!
-    - [ ] **Or?** using katex directly in `<head>`
-  - [ ] **later** -- [markdown-it-mathjax](https://github.com/classeur/markdown-it-mathjax)
+    - **Or?** using katex directly in `<head>`
+  - **later** -- [markdown-it-mathjax](https://github.com/classeur/markdown-it-mathjax)
 - [x] Insert syntax highlight for inline/block codes.
 - [ ] Custom markdown parser (for example, use `===text===` for rendering to `<mark>text</mark>`).
 - [ ] Migrate from wordpress (less modification as possible)
@@ -37,9 +39,9 @@ Don't design, testing to create components first! Directly test or reference to 
 - [x] 404 page.
 - [x] Bootstrap -> **don't use in texmath / dinhanhthi.com!**
   - [x] If wanna use, read [this note](https://dinhanhthi.com/11ty-nunjucks#bootstrap--11ty).
-  - [ ] **optional** -- Separatedly components.
-  - [ ] **optional** -- Using [Bootstrap native](https://thednp.github.io/bootstrap.native/).
-  - [ ] Remove bootstrap from test!
+  - **optional** -- Separatedly components.
+  - **optional** -- Using [Bootstrap native](https://thednp.github.io/bootstrap.native/).
+  - [x] Remove bootstrap from test!
 - [ ] Without bootstrap
   - [ ] Collapse with native JS -> [ref](https://medium.com/dailyjs/mimicking-bootstraps-collapse-with-vanilla-javascript-b3bb389040e7)
 
