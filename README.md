@@ -57,6 +57,9 @@ Don't design, testing to create components first! Directly test or reference to 
 ## Build & run this theme
 
 ``` bash
+# install nodejs
+# https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
+
 npm install
 # modify informations in _data/metadata.json
 npm start
