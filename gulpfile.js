@@ -5,8 +5,8 @@ var cache = require('gulp-cache'); // 1-1
 
 function generateSizes() {
     return gulp
-        .src('img_src/**/*.{png,jpg}')
-        .pipe(cache(
+        .src('./img_src/**/*.{png,jpg}')
+        .pipe(
             responsive({
                 // Resize all JPG images to three different sizes: 200, 500, and 630 pixels
                 '**/*': [{
@@ -26,8 +26,8 @@ function generateSizes() {
                 errorOnUnusedImage: false,
                 errorOnEnlargement: false
             })
-        ))
-        .pipe(gulp.dest('img'));
+        )
+        .pipe(gulp.dest('./img'));
 }
 
 function imgCompress() {

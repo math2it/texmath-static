@@ -26,6 +26,16 @@ npm run gulp
 npm install --global gulp-cli # to use "gulp" globally
 npm install gulp # install locally
 gulp build
+# generate different sizes for images in /img_src/
+gulp generateSizes
+# compress images in /img/
+gulp imgCompress
+```
+
+Setting up on Netlify
+
+``` bash
+npm run build
 ```
 
 ## TODO
