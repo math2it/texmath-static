@@ -20,7 +20,7 @@ Don't design, testing to create components first! Directly test or reference to 
   - use option `prefixHeadingsIds: false`
 - [ ] Excerpt for posts. -> [this tut](https://www.11ty.dev/docs/data-frontmatter-customize/#example-parse-excerpts-from-content)
 - [ ] Insert images
-  - [ ] Insert inside markdown file with custom folder.
+  - [ ] Insert inside markdown file with custom folder. -> [this tut](https://jamesdoc.com/blog/2018/rwd-img-11ty/)
   - [ ] Reponsive images. -> plugins [eleventy-img](https://github.com/11ty/eleventy-img) and [eleventy-plugin-images-responsiver](https://www.npmjs.com/package/eleventy-plugin-images-responsiver).
   - [ ] Lazy load images -> check [this plugin](https://www.npmjs.com/package/eleventy-plugin-lazyimages).
   - [ ] Custom image size inside markdown, like `![](/link/img.png =200x200)` -> [this plugin](https://www.npmjs.com/package/markdown-it-imsize).
@@ -32,7 +32,8 @@ Don't design, testing to create components first! Directly test or reference to 
     - [x] Using updated version (12), currently 0.5.1. -> use [this](https://github.com/iktakahiro/markdown-it-katex/) instead!
     - **Or?** using katex directly in `<head>`
   - **later** -- [markdown-it-mathjax](https://github.com/classeur/markdown-it-mathjax)
-- [x] Insert syntax highlight for inline/block codes.
+- [x] Insert syntax highlight for inline/block codes. -> [plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/) + [list of supported languages](https://prismjs.com/#languages-list)
+  - [x] Why there is no space before block of code when using `js` without lines, i.e. `j/2-3`.
 - [ ] Custom class for blocks in markdown like `{:.class_name}`. -> try [this plugin](https://www.npmjs.com/package/markdown-it-attrs)? (it uses `{.class_name}` instead -> use [custom delimiters](https://www.npmjs.com/package/markdown-it-attrs#custom-delimiters)).
   - Check [this](https://github.com/11ty/eleventy/issues/697) also.
 - [ ] Migrate from wordpress (less modification as possible)
@@ -61,7 +62,6 @@ Don't design, testing to create components first! Directly test or reference to 
 - [ ] Without bootstrap
   - [ ] Collapse with native JS -> [ref](https://medium.com/dailyjs/mimicking-bootstraps-collapse-with-vanilla-javascript-b3bb389040e7)
 - [ ] Create a custom plugin in 11ty -> check [Creating an 11ty Plugin - SVG Embed Tool - bryanlrobinson.com](https://bryanlrobinson.com/blog/creating-11ty-plugin-embed-svg-contents/)
-t.
 
 ## Tools
 
@@ -87,6 +87,7 @@ npm start
 ## References
 
 - [Official docs](https://www.11ty.dev/docs/).
+- [Moving from WordPress to Eleventy](https://www.mattnortham.com/blog/2020/moving-from-wordpress-to-eleventy/#handling-images)
 
 ## Cheat sheet
 

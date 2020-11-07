@@ -6,7 +6,17 @@ tags: [default, code]
 layout: layouts/post.njk
 ---
 
+## Insert normally
+
+Try to inset an image from `/img/` (normally, without any effect):
+
+``` js
+![Nancy](/img/nancy2.jpg)
+// image is store in /img/
+```
+
+![Nancy](/img/nancy2.jpg)
+
 ## References
 
-- [11ty/eleventy-img: Utility to perform build-time image transformations.](https://github.com/11ty/eleventy-img)
 - [James Doc - Responsive images in Eleventy](https://jamesdoc.com/blog/2018/rwd-img-11ty/)
