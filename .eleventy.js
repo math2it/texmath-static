@@ -8,6 +8,9 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItKatex = require('@iktakahiro/markdown-it-katex');
 const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
+const lazy_loading = require('markdown-it-image-lazy-loading');
+const imSize = require('markdown-it-imsize');
+
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
@@ -69,18 +72,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("img");
 
     /* Markdown Overrides */
-    const options = {
+    let options = {
         html: true,
         breaks: true,
         linkify: true,
     };
-    let markdownLibrary = markdownIt(options).use(markdownItAnchor, {
-        permalink: true,
-        permalinkClass: "direct-link",
-        permalinkSymbol: "#"
-    });
-    markdownLibrary.use(markdownItKatex);
-    eleventyConfig.setLibrary("md", markdownLibrary);
 
     // responsible images
     eleventyConfig.addFilter("imgSuffix", (imgStr, suffix) => {
@@ -109,8 +105,19 @@ module.exports = function (eleventyConfig) {
             }
         }
     };
-    eleventyConfig.setLibrary("md", markdownIt(options).use(
-        markdownItResponsive, rwdOptions));
+
+    // anchor
+    let markdownLibrary = markdownIt(options)
+        .use(markdownItAnchor, {
+            permalink: true,
+            permalinkClass: "direct-link",
+            permalinkSymbol: "#"
+        })
+        .use(markdownItResponsive, rwdOptions)
+        .use(lazy_loading) // lazy load
+        .use(markdownItKatex) // katex
+        .use(imSize) // custom im size
+    eleventyConfig.setLibrary("md", markdownLibrary);
 
     // Browsersync Overrides
     eleventyConfig.setBrowserSyncConfig({

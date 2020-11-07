@@ -50,7 +50,7 @@ Don't design, testing to create components first! Directly test or reference to 
   - [ ] keyboard by `[[Ctrl]]` --> [this](https://www.npmjs.com/package/@gerhobbelt/markdown-it-kbd)
   - [ ] Task list like github -> [this](https://www.npmjs.com/package/@hackmd/markdown-it-task-lists)
   - [ ] many [more](https://www.npmjs.com/search?q=keywords%3Amarkdown-it-plugin&page=2&perPage=20)
-- [ ] Hover heading links -> [plugin](https://www.npmjs.com/package/markdown-it-github-headings).
+- [x] Hover heading links ->  `markdown-it-anchor`
   - use option `prefixHeadingsIds: false`
 - [ ] Excerpt for posts. -> [this tut](https://www.11ty.dev/docs/data-frontmatter-customize/#example-parse-excerpts-from-content)
 - [ ] Insert images
@@ -61,9 +61,10 @@ Don't design, testing to create components first! Directly test or reference to 
   - [ ] Only generate + compress the newer images (don't perform on already-done ones)
     - [x] cache for compress -> using `gulp-cache` (not `gulp-cached`)
     - [ ] cache for generator sizes
-  - [ ] Lazy load images -> check [this plugin](https://www.npmjs.com/package/eleventy-plugin-lazyimages).
-  - [ ] Custom image size inside markdown, like `![](/link/img.png =200x200)` -> [this plugin](https://www.npmjs.com/package/markdown-it-imsize).
-- [ ] Create a custom inline shortcode (for example, for highlight text, keyboard,...)
+  - [x] Lazy load images -> use [this](https://www.npmjs.com/package/markdown-it-image-lazy-loading)
+    - `eleventy-plugin-lazyimages` doesn't work well with `markdown-it-responsive` -> don't use!!!
+  - [x] Custom image size inside markdown, like `![](/link/img.png =200x200)` -> [this plugin](https://www.npmjs.com/package/markdown-it-imsize).
+  - [ ] Inline image?
 - [ ] Create a custom block shortcode (for example, hide/show box)
 - [ ] Insert custom javascript blocks (for example, reference-mode button)
 - [x] Insert math equations (katex)

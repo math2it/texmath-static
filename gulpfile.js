@@ -19,7 +19,7 @@ function generateSizes() {
                     // Compress, strip metadata
                 }],
             }, {
-                quality: 80,
+                quality: 90,
                 progressive: true,
                 withMetadata: false,
                 withoutEnlargement: true,
