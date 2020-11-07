@@ -2,7 +2,31 @@
 
 *A static version for texmath.* -- __11ty version__.
 
-__Demo__: https://eloquent-goldstine-e9aa03.netlify.app
+- __Demo__: https://eloquent-goldstine-e9aa03.netlify.app
+- **Tools**
+  - [11ty](https://www.11ty.dev/)
+  - [Nunjucks](https://mozilla.github.io/nunjucks/) (mozilla)
+- **Starters**
+  - [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog)
+
+## Build & run this theme
+
+``` bash
+# install nodejs
+# https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
+
+npm install
+# modify informations in _data/metadata.json
+npm start
+# localhost:8080/
+
+# generate different sizes for images (from /img_src/ to /img/) + compress the images (in /img/)
+npm run gulp
+# or
+npm install --global gulp-cli # to use "gulp" globally
+npm install gulp # install locally
+gulp build
+```
 
 ## TODO
 
@@ -22,6 +46,11 @@ Don't design, testing to create components first! Directly test or reference to 
 - [ ] Insert images
   - [x] Insert inside markdown file with custom folder. -> [this tut](https://jamesdoc.com/blog/2018/rwd-img-11ty/)
   - [x] Reponsive images ([read more](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)) + `markdown-it` -> plugin `@gerhobbelt/markdown-it-responsive` + generate images by gulp (`npm i gulp`) and gulp's plugin `gulp-responsive`.
+    - [x] Watch the changes automatically using `gulp.watch()`
+  - [x] Compress images at the same time with generate different sizes for images -> this [tut](https://www.freecodecamp.org/news/how-to-minify-images-with-gulp-gulp-imagemin-and-boost-your-sites-performance-6c226046e08e/)
+  - [ ] Only generate + compress the newer images (don't perform on already-done ones)
+    - [x] cache for compress -> using `gulp-cache` (not `gulp-cached`)
+    - [ ] cache for generator sizes
   - [ ] Lazy load images -> check [this plugin](https://www.npmjs.com/package/eleventy-plugin-lazyimages).
   - [ ] Custom image size inside markdown, like `![](/link/img.png =200x200)` -> [this plugin](https://www.npmjs.com/package/markdown-it-imsize).
 - [ ] Create a custom inline shortcode (for example, for highlight text, keyboard,...)
@@ -63,26 +92,7 @@ Don't design, testing to create components first! Directly test or reference to 
   - [ ] Collapse with native JS -> [ref](https://medium.com/dailyjs/mimicking-bootstraps-collapse-with-vanilla-javascript-b3bb389040e7)
 - [ ] Create a custom plugin in 11ty -> check [Creating an 11ty Plugin - SVG Embed Tool - bryanlrobinson.com](https://bryanlrobinson.com/blog/creating-11ty-plugin-embed-svg-contents/)
 
-## Tools
-
-- [11ty](https://www.11ty.dev/)
-- [Nunjucks](https://mozilla.github.io/nunjucks/) (mozilla)
-
-## Starters
-
-- [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog)
-
-## Build & run this theme
-
-``` bash
-# install nodejs
-# https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
-
-npm install
-# modify informations in _data/metadata.json
-npm start
-# localhost:8080/
-```
+## 
 
 ## References
 

@@ -1,10 +1,12 @@
-var gulp = require('gulp')
-var responsive = require('gulp-responsive')
+var gulp = require('gulp');
+var responsive = require('gulp-responsive');
+var imagemin = require("gulp-imagemin");
+var cache = require('gulp-cache'); // 1-1
 
-gulp.task('build', function () {
+function generateSizes() {
     return gulp
         .src('img_src/**/*.{png,jpg}')
-        .pipe(
+        .pipe(cache(
             responsive({
                 // Resize all JPG images to three different sizes: 200, 500, and 630 pixels
                 '**/*': [{
@@ -24,6 +26,23 @@ gulp.task('build', function () {
                 errorOnUnusedImage: false,
                 errorOnEnlargement: false
             })
-        )
-        .pipe(gulp.dest('img'))
+        ))
+        .pipe(gulp.dest('img'));
+}
+
+function imgCompress() {
+    return gulp
+        .src('./img/**/*.{png,jpg}')
+        .pipe(cache(imagemin()))
+        .pipe(gulp.dest("./img"));
+}
+
+gulp.task('imgCompress', imgCompress);
+gulp.task('generateSizes', generateSizes);
+// gulp.task("compressImg", gulp.series("imgCompress", "watch"));
+gulp.task("watch", () => {
+    gulp.watch("./img_src/**/*.{png,jpg}", imgCompress);
+    gulp.watch("./img_src/**/*.{png,jpg}", generateSizes);
 })
+
+gulp.task("build", gulp.series("generateSizes", "imgCompress"));
