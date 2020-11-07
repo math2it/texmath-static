@@ -22,10 +22,10 @@ Try to inset an image from `/img/` (normally, without any effect):
 Custom im size inside markdown?
 
 ``` js
-![test](/img/nancy.jpg =100x200)
+![test](/img/nancy.jpg =100x300)
 ```
 
-![test](/img/nancy.jpg =100x200)
+![test](/img/nancy.jpg =100x300)
 
 Auto height?
 
@@ -33,15 +33,15 @@ Auto height?
 ![test](/img/nancy.jpg =100x)
 ```
 
-![test](/img/nancy2.jpg =100x)
+![test](/img/nancy.jpg =100x)
 
 Auto width?
 
 ``` js
-![test](/img/nancy.jpg =x200)
+![test](/img/nancy.jpg =x300)
 ```
 
-![test](/img/nancy.jpg =x200)
+![test](/img/nancy.jpg =x300)
 
 ## Try lazy load
 
