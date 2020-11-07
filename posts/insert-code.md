@@ -6,6 +6,10 @@ tags: [default, code]
 layout: layouts/post.njk
 ---
 
+## Problem with `<pre><code></code></pre>` & indent?
+
+Check this [official solution](https://www.11ty.dev/docs/languages/markdown/#there-are-extra-and-in-my-output).
+
 ## Inline code
 
 Test with inline code like this `\begin{document}`.

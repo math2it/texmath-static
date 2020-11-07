@@ -10,18 +10,56 @@ layout: layouts/post.njk
 
 **Normal paragraph.** Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the _information highway will close the loop on focusing solely on the bottom line_.
 
-## H2 Section Header
+## TOC?
 
-### H3
+``` js
+[[toc]]
+```
 
-#### H4
+[[toc]]
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+## Headings H2
+
+### Heading H3
+
+#### Heading H4
+
+## Emoji?
+
+``` js
+:imp: :innocent: :point_up:
+```
+
+:imp: :innocent: :point_up:
+
+Check more [here](https://www.webfx.com/tools/emoji-cheat-sheet/).
+
+## HTML block inside markdown?
+
+> This is a blockquote generated from markdown-it
 
 
-> Test with blockquote.
+<blockquote>
+<p>This is a blockquote from input html element</p>
+</blockquote>
 
-List:
+## Mark
+
+``` js
+Doan nay rat dai ==danh dau== khong can danh dau.
+```
+
+Doan nay rat dai ==danh dau== khong can danh dau.
+
+## Keyboard
+
+``` js
+Using this [[Ctrl]] + [[Shift]] + [[L]]
+```
+
+Using this [[Ctrl]] + [[Shift]] + [[L]]
+
+## List
 
 1. abc
 2. xyz
@@ -37,7 +75,37 @@ List:
   2. sadasd asd asd
 - dasdqwdas asdas ds
 
+### Task list
+
+- [ ] Task 1
+- [x] Task 2
+- [x] Task 3
+- [ ] Task 4
+
+1. [ ] task
+2. [x] task
+
+## Footnote
+
+Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+    Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
+
+## Math
 
 $$
 \dfrac{1}{2}
 $$
+
+## Table
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+

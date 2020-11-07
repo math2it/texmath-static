@@ -6,10 +6,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-const markdownItKatex = require('@iktakahiro/markdown-it-katex');
 const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
-const lazy_loading = require('markdown-it-image-lazy-loading');
-const imSize = require('markdown-it-imsize');
 
 
 module.exports = function (eleventyConfig) {
@@ -114,9 +111,16 @@ module.exports = function (eleventyConfig) {
             permalinkSymbol: "#"
         })
         .use(markdownItResponsive, rwdOptions)
-        .use(lazy_loading) // lazy load
-        .use(markdownItKatex) // katex
-        .use(imSize) // custom im size
+        .use(require('markdown-it-image-lazy-loading')) // lazy load
+        .use(require('@iktakahiro/markdown-it-katex')) // katex
+        .use(require('markdown-it-imsize')) // custom im size
+        .use(require("markdown-it-emoji")) // emoji
+        .use(require('markdown-it-mark')) // ==mark==
+        .use(require("markdown-it-task-lists"))
+        .use(require("markdown-it-table-of-contents"))
+        .use(require('markdown-it-footnote'))
+        .use(require('markdown-it-kbd')); // [[Ctrl]]
+
     eleventyConfig.setLibrary("md", markdownLibrary);
 
     // Browsersync Overrides

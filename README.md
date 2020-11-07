@@ -43,13 +43,16 @@ npm run build
 Don't design, testing to create components first! Directly test or reference to a source.
 
 - [x] All basic fotmat in markdown (heading, blockquote, list, bold, italic,...)
-  - [ ] Using html tags inside markdown doc -> [this](https://github.com/markdown-it/markdown-it#init-with-presets-and-options)
+  - [x] Using html tags inside markdown doc -> [this](https://github.com/markdown-it/markdown-it#init-with-presets-and-options)
   - [ ] Cucstom container (eg. `::: warning` becomes `<div class="warning"></div>`)
-  - [ ] Footnote -> [this](https://github.com/markdown-it/markdown-it-footnote)
-  - [ ] use `===text===` for rendering to `<mark>text</mark>` -> [this](https://github.com/markdown-it/markdown-it-mark)
-  - [ ] keyboard by `[[Ctrl]]` --> [this](https://www.npmjs.com/package/@gerhobbelt/markdown-it-kbd)
-  - [ ] Task list like github -> [this](https://www.npmjs.com/package/@hackmd/markdown-it-task-lists)
+  - [x] Footnote -> [this](https://github.com/markdown-it/markdown-it-footnote)
+  - [x] use `==text==` for rendering to `<mark>text</mark>` -> [this](https://github.com/markdown-it/markdown-it-mark)
+  - [x] keyboard by `[[Ctrl]]` --> [this](https://www.npmjs.com/package/@gerhobbelt/markdown-it-kbd)
+  - [x] Task list like github -> [this](https://www.npmjs.com/package/@hackmd/markdown-it-task-lists)
+  - [x] Emoji? -> this
+  - [x] FontAwesome support -> [this](https://www.npmjs.com/package/@gerhobbelt/markdown-it-fontawesome)
   - [ ] many [more](https://www.npmjs.com/search?q=keywords%3Amarkdown-it-plugin&page=2&perPage=20)
+- [ ] Table of contents (TOC) -> use [this plugin](https://www.npmjs.com/package/eleventy-plugin-toc) (for 11ty), and [this](https://www.npmjs.com/package/markdown-it-table-of-contents) (markdown-it, `[[toc]]`).
 - [x] Hover heading links ->  `markdown-it-anchor`
   - use option `prefixHeadingsIds: false`
 - [ ] Excerpt for posts. -> [this tut](https://www.11ty.dev/docs/data-frontmatter-customize/#example-parse-excerpts-from-content)
@@ -71,6 +74,7 @@ Don't design, testing to create components first! Directly test or reference to 
   - [x] [markdown-it-katex](https://github.com/waylonflinn/markdown-it-katex)
     - [x] Using updated version (12), currently 0.5.1. -> use [this](https://github.com/iktakahiro/markdown-it-katex/) instead!
     - **Or?** using katex directly in `<head>`
+  - More advanced (using katex also) -> [here](https://www.npmjs.com/package/markdown-it-texmath)
   - **later** -- [markdown-it-mathjax](https://github.com/classeur/markdown-it-mathjax)
 - [x] Insert syntax highlight for inline/block codes. -> [plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/) + [list of supported languages](https://prismjs.com/#languages-list)
   - [x] Why there is no space before block of code when using `js` without lines, i.e. `j/2-3`.
@@ -92,7 +96,6 @@ Don't design, testing to create components first! Directly test or reference to 
 - [ ] Categories
 - [ ] Custom urls (with/without `/posts/` or with/without days)
 - [x] Previous / Next post
-- [ ] Table of contents (TOC) -> use [this plugin](https://www.npmjs.com/package/eleventy-plugin-toc).
 - [x] 404 page.
 - [x] Bootstrap -> **don't use in texmath / dinhanhthi.com!**
   - [x] If wanna use, read [this note](https://dinhanhthi.com/11ty-nunjucks#bootstrap--11ty).
