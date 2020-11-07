@@ -21,7 +21,7 @@ Don't design, testing to create components first! Directly test or reference to 
 - [ ] Excerpt for posts. -> [this tut](https://www.11ty.dev/docs/data-frontmatter-customize/#example-parse-excerpts-from-content)
 - [ ] Insert images
   - [x] Insert inside markdown file with custom folder. -> [this tut](https://jamesdoc.com/blog/2018/rwd-img-11ty/)
-  - [x] Reponsive images + markdown-it -> plugin `@gerhobbelt/markdown-it-responsive` + generate images by gulp (`npm i gulp`) and gulp's plugin `gulp-responsive`.
+  - [x] Reponsive images ([read more](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)) + `markdown-it` -> plugin `@gerhobbelt/markdown-it-responsive` + generate images by gulp (`npm i gulp`) and gulp's plugin `gulp-responsive`.
   - [ ] Lazy load images -> check [this plugin](https://www.npmjs.com/package/eleventy-plugin-lazyimages).
   - [ ] Custom image size inside markdown, like `![](/link/img.png =200x200)` -> [this plugin](https://www.npmjs.com/package/markdown-it-imsize).
 - [ ] Create a custom inline shortcode (for example, for highlight text, keyboard,...)
