@@ -109,3 +109,66 @@ $$
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
+## Warning blocks
+
+``` js
+::: success
+This is a success message.
+:::
+```
+
+::: success
+This is a success message.
+:::
+
+``` js
+::: info
+This is a info message.
+:::
+```
+
+::: info
+This is a info message.
+:::
+
+``` js
+::: warning
+This is a warning message.
+:::
+```
+
+::: warning
+This is a warning message.
+:::
+
+``` js
+::: danger
+This is a danger message.
+:::
+```
+
+::: danger
+This is a danger message.
+:::
+
+## Custom class `{:.class_name}` (like in Jekyll)
+
+``` js
+Test custom class with __red text__{:.text-red} to see the change in color :D
+```
+
+Test custom class with __red text__{:.text-red} to see the change in color :D
+
+## Youtube video
+
+``` js
+@[youtube](dQw4w9WgXcQ)
+```
+
+@[youtube](ZqjhmdRgXMw)
+
+``` js
+@[youtube](https://www.youtube.com/watch?v=ZqjhmdRgXMw)
+```
+
+@[youtube](https://www.youtube.com/watch?v=ZqjhmdRgXMw)

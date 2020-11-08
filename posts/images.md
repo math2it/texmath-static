@@ -6,42 +6,44 @@ tags: [default, code]
 layout: layouts/post.njk
 ---
 
+Thu nghiem **xem the nao**, xem no co [abc](/home), _asdasd_.
+
 ## Insert normally
 
 Try to inset an image from `/img/` (normally, without any effect):
 
 ``` js
-![Nancy](/img/nancy2.jpg)
+![Nancy](/img/doremon.jpg)
 // image is store in /img/
 ```
 
-![Nancy](/img/nancy2.jpg)
+![Nancy](/img/doremon.jpg)
 
 ## Custom sizes
 
 Custom im size inside markdown?
 
 ``` js
-![test](/img/nancy.jpg =100x300)
+![test](/img/doremon.jpg =100x300)
 ```
 
-![test](/img/nancy.jpg =100x300)
+![test](/img/doremon.jpg =100x300)
 
 Auto height?
 
 ``` js
-![test](/img/nancy.jpg =100x)
+![test](/img/doremon.jpg =100x)
 ```
 
-![test](/img/nancy.jpg =100x)
+![test](/img/doremon.jpg =100x)
 
 Auto width?
 
 ``` js
-![test](/img/nancy.jpg =x300)
+![test](/img/doremon.jpg =x300)
 ```
 
-![test](/img/nancy.jpg =x300)
+![test](/img/doremon.jpg =x300)
 
 ## Try lazy load
 

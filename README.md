@@ -44,7 +44,8 @@ Don't design, testing to create components first! Directly test or reference to 
 
 - [x] All basic fotmat in markdown (heading, blockquote, list, bold, italic,...)
   - [x] Using html tags inside markdown doc -> [this](https://github.com/markdown-it/markdown-it#init-with-presets-and-options)
-  - [ ] Cucstom container (eg. `::: warning` becomes `<div class="warning"></div>`)
+  - [ ] Custom containers -> [this](https://github.com/markdown-it/markdown-it-container)
+    - [x] Warning blocks (eg. `::: warning` becomes `<div class="warning"></div>`) 
   - [x] Footnote -> [this](https://github.com/markdown-it/markdown-it-footnote)
   - [x] use `==text==` for rendering to `<mark>text</mark>` -> [this](https://github.com/markdown-it/markdown-it-mark)
   - [x] keyboard by `[[Ctrl]]` --> [this](https://www.npmjs.com/package/@gerhobbelt/markdown-it-kbd)
@@ -52,10 +53,18 @@ Don't design, testing to create components first! Directly test or reference to 
   - [x] Emoji? -> this
   - [x] FontAwesome support -> [this](https://www.npmjs.com/package/@gerhobbelt/markdown-it-fontawesome)
   - [ ] many [more](https://www.npmjs.com/search?q=keywords%3Amarkdown-it-plugin&page=2&perPage=20)
-- [ ] Table of contents (TOC) -> use [this plugin](https://www.npmjs.com/package/eleventy-plugin-toc) (for 11ty), and [this](https://www.npmjs.com/package/markdown-it-table-of-contents) (markdown-it, `[[toc]]`).
+  
+- [x] Table of contents (TOC) -> use [this plugin](https://www.npmjs.com/package/eleventy-plugin-toc) (for 11ty), and [this](https://www.npmjs.com/package/markdown-it-table-of-contents) (markdown-it, `[[toc]]`).
+
 - [x] Hover heading links ->  `markdown-it-anchor`
+  
   - use option `prefixHeadingsIds: false`
-- [ ] Excerpt for posts. -> [this tut](https://www.11ty.dev/docs/data-frontmatter-customize/#example-parse-excerpts-from-content)
+  
+- [x] Excerpt for posts.
+
+  - (need to use a separator like `<!-- more -->`) => not working!!!!
+  - this [tut](https://www.jonathanyeong.com/posts/excerpts-with-eleventy/) (auto)
+
 - [ ] Insert images
   - [x] Insert inside markdown file with custom folder. -> [this tut](https://jamesdoc.com/blog/2018/rwd-img-11ty/)
   - [x] Reponsive images ([read more](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)) + `markdown-it` -> plugin `@gerhobbelt/markdown-it-responsive` + generate images by gulp (`npm i gulp`) and gulp's plugin `gulp-responsive`.
@@ -68,45 +77,76 @@ Don't design, testing to create components first! Directly test or reference to 
     - `eleventy-plugin-lazyimages` doesn't work well with `markdown-it-responsive` -> don't use!!!
   - [x] Custom image size inside markdown, like `![](/link/img.png =200x200)` -> [this plugin](https://www.npmjs.com/package/markdown-it-imsize).
   - [ ] Inline image?
-- [ ] Create a custom block shortcode (for example, hide/show box)
+  - [ ] Auto numbering images -> Using CSS
+  
 - [ ] Insert custom javascript blocks (for example, reference-mode button)
+
 - [x] Insert math equations (katex)
   - [x] [markdown-it-katex](https://github.com/waylonflinn/markdown-it-katex)
     - [x] Using updated version (12), currently 0.5.1. -> use [this](https://github.com/iktakahiro/markdown-it-katex/) instead!
     - **Or?** using katex directly in `<head>`
   - More advanced (using katex also) -> [here](https://www.npmjs.com/package/markdown-it-texmath)
   - **later** -- [markdown-it-mathjax](https://github.com/classeur/markdown-it-mathjax)
+  
 - [x] Insert syntax highlight for inline/block codes. -> [plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/) + [list of supported languages](https://prismjs.com/#languages-list)
+  
   - [x] Why there is no space before block of code when using `js` without lines, i.e. `j/2-3`.
-- [ ] Custom class for blocks in markdown like `{:.class_name}`. -> try [this plugin](https://www.npmjs.com/package/markdown-it-attrs)? (it uses `{.class_name}` instead -> use [custom delimiters](https://www.npmjs.com/package/markdown-it-attrs#custom-delimiters)).
+  
+- [x] Custom class for blocks in markdown like `{:.class_name}`. -> try [this plugin](https://www.npmjs.com/package/markdown-it-attrs)? (it uses `{.class_name}` instead -> use [custom delimiters](https://www.npmjs.com/package/markdown-it-attrs#custom-delimiters)).
+  
   - Check [this](https://github.com/11ty/eleventy/issues/697) also.
+  - __Note__: need `markdown-it@11.0.1` (must be `<12.0.0`)
+  
 - [ ] Migrate from wordpress (less modification as possible)
-- [ ] Pagination.
-- [ ] Navigation.
-- [ ] Multi-users/authors.
-- [ ] Embed Youtube videos based on its URL. -> check [this plugin](https://www.npmjs.com/package/eleventy-plugin-youtube-embed).
+
+- [x] Pagination
+
+  - Posts -> [this](https://www.11ty.dev/docs/pagination/#paging-a-collection)
+
+  - Others -> [this](https://www.11ty.dev/docs/pagination/)
+  - Create link to the list of pages -> [this](https://www.11ty.dev/docs/pagination/nav/)
+
+- [x] Navigation.
+
+- [ ] Multi-users/authors -> [this](https://www.raymondcamden.com/2020/08/24/supporting-multiple-authors-in-an-eleventy-blog)
+
+- [x] Embed Youtube videos based on its URL. -> check [this plugin](https://www.npmjs.com/package/eleventy-plugin-youtube-embed).
+
 - [ ] SEO friendly?
+
 - [ ] Keep links from Wordpress.
+
 - [ ] Popular posts? Related posts?
-- [ ] Search.
-- [ ] Series of posts.
-- [ ] Comment system.
-- [ ] Upvote button.
+
+- [ ] Search -> Using Google Custom Search
+
+- [ ] Series of posts. -> using collections
+
+- [ ] Comment system. -> using facebook comment system
+
+- [ ] Upvote button. -> using facebook like or something else?
+
 - [x] Tags
+
 - [ ] Categories
+
 - [ ] Custom urls (with/without `/posts/` or with/without days)
+
 - [x] Previous / Next post
+
 - [x] 404 page.
+
 - [x] Bootstrap -> **don't use in texmath / dinhanhthi.com!**
   - [x] If wanna use, read [this note](https://dinhanhthi.com/11ty-nunjucks#bootstrap--11ty).
   - **optional** -- Separatedly components.
   - **optional** -- Using [Bootstrap native](https://thednp.github.io/bootstrap.native/).
   - [x] Remove bootstrap from test!
+  
 - [ ] Without bootstrap
+  
   - [ ] Collapse with native JS -> [ref](https://medium.com/dailyjs/mimicking-bootstraps-collapse-with-vanilla-javascript-b3bb389040e7)
+  
 - [ ] Create a custom plugin in 11ty -> check [Creating an 11ty Plugin - SVG Embed Tool - bryanlrobinson.com](https://bryanlrobinson.com/blog/creating-11ty-plugin-embed-svg-contents/)
-
-## 
 
 ## References
 

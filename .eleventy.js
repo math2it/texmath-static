@@ -3,19 +3,26 @@ const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const striptags = require("striptags");
 
+// markdown-it's extensions
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
+var markdownItAttrs = require('markdown-it-attrs');
+
 
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addShortcode("excerpt", (article) => extractExcerpt(article));
+
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(pluginSyntaxHighlight);
     eleventyConfig.addPlugin(pluginNavigation);
 
     eleventyConfig.setDataDeepMerge(true);
 
+    // layour alias
     eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
     eleventyConfig.addFilter("readableDate", dateObj => {
@@ -103,6 +110,13 @@ module.exports = function (eleventyConfig) {
         }
     };
 
+    // containers (markdown-it-container)
+    // const warningOpt = {
+    //     render: function (tokens, idx){
+
+    //     }
+    // }
+
     // anchor
     let markdownLibrary = markdownIt(options)
         .use(markdownItAnchor, {
@@ -119,6 +133,17 @@ module.exports = function (eleventyConfig) {
         .use(require("markdown-it-task-lists"))
         .use(require("markdown-it-table-of-contents"))
         .use(require('markdown-it-footnote'))
+        .use(require('markdown-it-container'), 'success')
+        .use(require('markdown-it-container'), 'info')
+        .use(require('markdown-it-container'), 'warning')
+        .use(require('markdown-it-container'), 'danger')
+        .use(markdownItAttrs, {
+            leftDelimiter: '{:',
+            rightDelimiter: '}'
+        })
+        .use(require('markdown-it-video', {
+            youtube: { width: 640, height: 390 }
+        }))
         .use(require('markdown-it-kbd')); // [[Ctrl]]
 
     eleventyConfig.setLibrary("md", markdownLibrary);
@@ -171,3 +196,23 @@ module.exports = function (eleventyConfig) {
         }
     };
 };
+
+function extractExcerpt(article) {
+    if (!article.hasOwnProperty("templateContent")) {
+        console.warn(
+            'Failed to extract excerpt: Document has no property "templateContent".'
+        );
+        return null;
+    }
+
+    let excerpt = null;
+    const content = article.templateContent;
+
+    excerpt = striptags(content)
+        .substring(0, 200) // Cap at 200 characters
+        .replace(/^\s+|\s+$|\s+(?=\s)/g, "")
+        .trim()
+        .concat("...");
+
+    return excerpt;
+}

@@ -4,7 +4,10 @@ description: Testing everything about insertin a code
 date: 2020-09-12
 tags: [default, code]
 layout: layouts/post.njk
+excerpt: true
 ---
+
+This is the 1st paragraph used to be an excerpt for this post.
 
 ## Problem with `<pre><code></code></pre>` & indent?
 
